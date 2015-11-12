@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Arista';
     src: url('../css/Arista.ttf') format('truetype');    
@@ -24,90 +23,24 @@ header{
     font-family: Arista;
     font-size:128px;
     color: white;
-    background-color: #5baee1;
+    background: #5baee1 url('../img/logo.png') no-repeat center;
     margin:0;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     width: 100%;
+    height: 200px;
     z-index: 100;
 }
 
-header div.title{
-    text-align: center;
-    background: url('../img/logo.png') no-repeat;
-    background-size: contain;
-    width: 800px;
-    margin: auto;
-    padding-left: 64px;
-}
 
 header.minified{
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 12px 25px 0 rgba(0, 0, 0, 0.15);
-}
-
-header.minified div.title{
-    font-size:32px;
-    padding-left: 10px;
-    margin-left: 0;
-    width: 200px;
-}
-
-div#content{margin-top: 230px}
-
-@font-face {
-    font-family: 'Arista';
-    src: url('../css/Arista.ttf') format('truetype');    
-}
-
-@font-face {
-    font-family: 'Arista-light';
-    src: url('../css/Arista%20light.ttf') format('truetype');    
-}
-
-ul#agenda, ul.eventList {list-style-type: none;}
-
-ul#agenda li {margin-bottom: 20px}
-
-ul.eventList li{
-    width:320px;
-    margin:10px;
-    display : inline-block;
-    vertical-align : top;
-}
-
-header{
-    font-family: Arista;
-    font-size:128px;
-    color: white;
-    background-color: #5baee1;
-    margin:0;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-header div.title{
-    text-align: center;
-    background: url('../img/logo.png') no-repeat;
+    height: 40px;
+    background-position-x: 10px;
     background-size: contain;
-    width: 800px;
-    margin: auto;
-    padding-left: 64px;
 }
 
-header.minified{
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 12px 25px 0 rgba(0, 0, 0, 0.15);
-}
-
-header.minified div.title{
-    font-size:32px;
-    padding-left: 10px;
-    margin-left: 0;
-    width: 200px;
-}
 
 div#content{margin-top: 230px}
 
