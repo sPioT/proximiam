@@ -1,0 +1,24 @@
+[
+  '{{repeat(5, 20)}}',
+  {
+    date:'{{date(new Date(2015, 11, 12), new Date(), "YYYY-MM-dd")}}',
+    events:[
+   '{{repeat(1, 3)}}',
+      {
+        eventname: 'eventname_{{index()}}',
+        eventdate:'{{date(new Date(2015, 11, 12), new Date(), "YYYY-MM-ddT12:00:00")}}',
+        joindeadline:'{{date(new Date(2015, 11, 12), new Date(), "YYYY-MM-ddT11:45:00")}}',
+        restaurant : {
+          name:'{{company()}}',
+          image:'{{random("pizza.jpg", "kebab.jpg", "burger.jpg", "")}}'
+        },
+        attendee:[
+        '{{repeat(0, 10)}}',
+          {
+          id:'{{objectId()}}'
+          }
+        ]
+      }
+    ]
+  }
+]

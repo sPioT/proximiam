@@ -1,0 +1,377 @@
+
+@font-face {
+    font-family: 'Arista';
+    src: url('../css/Arista.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: 'Arista-light';
+    src: url('../css/Arista%20light.ttf') format('truetype');    
+}
+
+ul#agenda, ul.eventList {list-style-type: none;}
+
+ul#agenda li {margin-bottom: 20px}
+
+ul.eventList li{
+    width:320px;
+    margin:10px;
+    display : inline-block;
+    vertical-align : top;
+}
+
+header{
+    font-family: Arista;
+    font-size:128px;
+    color: white;
+    background-color: #5baee1;
+    margin:0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header div.title{
+    text-align: center;
+    background: url('../img/logo.png') no-repeat;
+    background-size: contain;
+    width: 800px;
+    margin: auto;
+    padding-left: 64px;
+}
+
+header.minified{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 12px 25px 0 rgba(0, 0, 0, 0.15);
+}
+
+header.minified div.title{
+    font-size:32px;
+    padding-left: 10px;
+    margin-left: 0;
+    width: 200px;
+}
+
+div#content{margin-top: 230px}
+
+@font-face {
+    font-family: 'Arista';
+    src: url('../css/Arista.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: 'Arista-light';
+    src: url('../css/Arista%20light.ttf') format('truetype');    
+}
+
+ul#agenda, ul.eventList {list-style-type: none;}
+
+ul#agenda li {margin-bottom: 20px}
+
+ul.eventList li{
+    width:320px;
+    margin:10px;
+    display : inline-block;
+    vertical-align : top;
+}
+
+header{
+    font-family: Arista;
+    font-size:128px;
+    color: white;
+    background-color: #5baee1;
+    margin:0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header div.title{
+    text-align: center;
+    background: url('../img/logo.png') no-repeat;
+    background-size: contain;
+    width: 800px;
+    margin: auto;
+    padding-left: 64px;
+}
+
+header.minified{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 12px 25px 0 rgba(0, 0, 0, 0.15);
+}
+
+header.minified div.title{
+    font-size:32px;
+    padding-left: 10px;
+    margin-left: 0;
+    width: 200px;
+}
+
+div#content{margin-top: 230px}
+
+section.day{
+    background-color: #F5F5F5;
+}
+
+div.eventDay{
+    font-family: Arista;
+    color: #12254b;
+    font-size: 32px;
+    margin : 10px;
+}
+
+div.eventDay div.day{
+    font-size: 128px;
+    line-height: 96px;
+    float: left;
+}
+
+div.eventDay div.month{
+    ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    writing-mode: lr-tb;
+    font-size: 56px;
+    width: 96px;
+    float: left;
+    line-height: 48px;
+    margin: 21px -32px 0px;
+    color: #5baee1;
+}
+
+div.events{
+    padding-left: 200px;
+}
+
+div.events article {
+    height: 102px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    border-radius: 3px;
+}
+
+div.eventPicture{
+    float : left;
+    height: 100px;
+    width: 100px;
+    background: url('../img/default.png');
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    border-radius: 3px 0px 0px 3px;
+}
+
+div.eventPicture timer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+div.eventDetail{
+    float: left;
+    width: 208px;
+    position: relative;
+    height: 98px;
+}
+
+div.eventName{
+    font-family: Arista-light;
+    color: #12254b;
+    font-size: 20px;
+    overflow: hidden;
+    height: 28px;
+}
+
+div.restaurantName{
+    background: url('../img/where.png') no-repeat left;
+    padding-left : 20px;
+}
+
+div.eventDate{
+    background: url('../img/clock.png') no-repeat left;
+    padding-left : 20px;
+}
+
+div.attendees{
+    color: #12254b;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    background: url('../img/attendee.png') no-repeat right;
+    padding-right: 18px;
+    padding-top: 2px;
+}
+
+div.join{
+    color: #12254b;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/add.png') no-repeat left;
+    padding-left: 18px;
+    padding-top: 2px;
+}
+
+div.joinclosed{
+    color: #9E9E9E;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/lock.png') no-repeat left;
+    padding-left: 18px;
+    padding-top: 2px;
+}
+section.day{
+    background-color: #F5F5F5;
+}
+
+div.eventDay{
+    font-family: Arista;
+    color: #12254b;
+    font-size: 32px;
+    margin : 10px;
+}
+
+div.eventDay div.day{
+    font-size: 128px;
+    line-height: 96px;
+    float: left;
+}
+
+div.eventDay div.month{
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    writing-mode: lr-tb;
+    font-size: 56px;
+    width: 96px;
+    float: left;
+    line-height: 48px;
+    margin: 21px -32px 0px;
+    color: #5baee1;
+}
+
+div.events{
+    padding-left: 200px;
+}
+
+div.events article {
+    height: 102px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    border-radius: 3px;
+}
+
+div.eventPicture{
+    float : left;
+    height: 100px;
+    width: 100px;
+    background: url('../img/default.png');
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    border-radius: 3px 0px 0px 3px;
+}
+
+div.eventPicture timer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+div.eventDetail{
+    float: left;
+    width: 208px;
+    position: relative;
+    height: 98px;
+}
+
+div.eventName{
+    font-family: Arista-light;
+    color: #12254b;
+    font-size: 20px;
+    overflow: hidden;
+    height: 28px;
+}
+
+div.restaurantName{
+    background: url('../img/where.png') no-repeat left;
+    padding-left : 20px;
+}
+
+div.eventDate{
+    background: url('../img/clock.png') no-repeat left;
+    padding-left : 20px;
+}
+
+div.attendees{
+    color: #12254b;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    background: url('../img/attendee.png') no-repeat right;
+    padding-right: 18px;
+    padding-top: 2px;
+}
+
+div.join{
+    color: #12254b;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/add.png') no-repeat left;
+    padding-left: 18px;
+    padding-top: 2px;
+}
+
+div.joinclosed{
+    color: #9E9E9E;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/lock.png') no-repeat left;
+    padding-left: 18px;
+    padding-top: 2px;
+}
+
+@media (max-width:890px){
+
+    div.events article{
+        width: 220px;
+        height: 208px;
+    }
+
+    ul.eventList li{
+        width:220px;
+    }
+
+    div.eventPicture{
+        clear: both;
+        width: 100%;
+    }
+
+    div.eventDetail{
+     margin-left:10px; 
+ }
+
+}
