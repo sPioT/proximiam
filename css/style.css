@@ -35,11 +35,6 @@ section {
 article{
 	margin:0px!important;
 }
-@media(max-width: 850px){
-	section{
-		margin-left:20px;
-	}
-}
 
 input[type="checkbox"]{
 	margin-left:20px;
