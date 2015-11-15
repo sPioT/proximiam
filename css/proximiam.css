@@ -53,6 +53,9 @@ header nav#menu{
 
 header nav#menu span.action{
     margin : 0 10px;
+}
+
+.action{    
     cursor: pointer;
 }
 
@@ -81,13 +84,32 @@ header.minified div#minimenu.closed{
     background-size: contain;
 }
 
-#connect{
-    background : url('../img/picto/log-in.png') no-repeat right;
+header #connect, header #connected{
     padding-right: 20px;
     position: absolute;
     top: 0;
     right: 0;
     margin: 10px;
+}
+
+header #connect{
+    background : url('../img/picto/log-in.png') no-repeat right;
+}
+
+header #connected{
+   right: 32px;
+   padding-right: 5px; 
+}
+
+header div.avatar{
+    background: url('../img/user/default.png');
+    background-size: contain;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
 }
 
 div#content{margin-top: 230px}

@@ -45,17 +45,21 @@
         </script>
     </head>
     <body>
-        <header>
+        <header ng-controller="menuCtrl">
             <div id="title"></div>
-            <div id="minimenu">
+            <div id="minimenu" ng-show="user">
                 menu
             </div>
-            <nav id="menu">
+            <nav id="menu" ng-show="user">
                 <span id="accueil" class="action">Accueil</span>
                 <span id="restos" class="action">Restos</span>
                 <span id="evenements" class="action">Évènements</span>
             </nav>
-            <div id="connect" class="action">Je me connecte</div>
+            <div id="connect" class="action" ng-hide="user" ng-click="connect()">Je me connecte</div>
+            <div id="connected" class="action" ng-show="user">
+                {{user.nickname}}
+            </div>
+            <div class="avatar" ng-show="user" ng-style="'{{user.image}}'!='' && {'background-image':'url(../img/user/{{user.image}})'}"></div>
         </header>
         <div ng-controller="eventCtrl" id="content">
             <main ng-show="agenda.length">
