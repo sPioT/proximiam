@@ -21,7 +21,11 @@
 
                 } else {
                     $('header').addClass('minified');
-                    $('#minimenu').addClass('closed');
+                    if ($("#menu").is(":visible")){
+                        $('#minimenu').removeClass('closed');
+                    } else{
+                        $('#minimenu').addClass('closed');
+                    }
                 }
             };
 
@@ -31,13 +35,11 @@
                 
                 $("#minimenu").click(function(){
                     if ($(this).hasClass("closed")){
-                        $('header').animate({height:'80px'},"fast");
                         $(this).removeClass("closed");
                     }else{
-                        $('header').animate({height:'40px'},"fast");
                         $(this).addClass("closed");
                     }
-                    $("#menu").fadeToggle();
+                    $("#menu").slideToggle();
                 });
             });
         </script>

@@ -31,12 +31,6 @@ header{
     z-index: 100;
 }
 
-
-header.minified{
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 12px 25px 0 rgba(0, 0, 0, 0.15);
-    height: 40px;
-}
-
 header #title{
     background : url('../img/logo.png') no-repeat center;
     background-size: contain;
@@ -46,9 +40,7 @@ header #title{
 }
 
 header.minified #title{
- /*   float:left;
-    width: 200px;*/
-    max-height: 40px;
+    height: 40px!important;
 }
 
 header nav#menu{
