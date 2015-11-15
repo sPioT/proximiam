@@ -2,6 +2,7 @@
 <html lang="fr" ng-app="proxiMiamApp">
     <head>
         <meta charset="utf-8" />
+        <link rel="shortcut icon" href="../favicon.ico">
         <title>ProxiMiam</title>        
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/proximiam.css">
@@ -11,24 +12,48 @@
         <script src="../js/vendor/jquery-2.1.4.min.js"></script>
         <script src="../js/proximiam.js"></script>
         <script>
-            var minified = false;
-
-            $(window).bind("scroll", function(){
-                if ($(window).scrollTop()>0){
-                    if (!minified){
-                        $('header').addClass('minified');
-                        minified=true;
-                    }
-                } else if (minified){
+            function manageScroll(){
+                if ($(window).scrollTop()<120){
+                    $('header div#title').css("height", (160-$(window).scrollTop())+"px");
                     $('header').removeClass('minified');
-                       minified=false;
+                    $('header').removeAttr("style");
+                    $('#menu').removeAttr("style");
+
+                } else {
+                    $('header').addClass('minified');
+                    $('#minimenu').addClass('closed');
                 }
+            };
+
+            $(window).bind("scroll",function(){manageScroll();});
+            $(document).ready(function(){
+                manageScroll();
+                
+                $("#minimenu").click(function(){
+                    if ($(this).hasClass("closed")){
+                        $('header').animate({height:'80px'},"fast");
+                        $(this).removeClass("closed");
+                    }else{
+                        $('header').animate({height:'40px'},"fast");
+                        $(this).addClass("closed");
+                    }
+                    $("#menu").fadeToggle();
+                });
             });
         </script>
     </head>
     <body>
         <header>
-            <div class="title"></div>
+            <div id="title"></div>
+            <div id="minimenu">
+                menu
+            </div>
+            <nav id="menu">
+                <span id="accueil" class="action">Accueil</span>
+                <span id="restos" class="action">Restos</span>
+                <span id="evenements" class="action">Évènements</span>
+            </nav>
+            <div id="connect" class="action">Je me connecte</div>
         </header>
         <div ng-controller="eventCtrl" id="content">
             <main ng-show="agenda.length">
@@ -47,7 +72,7 @@
                                 <ul class="eventList">
                                     <li ng-repeat="event in day.events">
                                         <article class="event" ng-style="isPassed('{{event.eventdate}}') && {'opacity':'0.50'}">
-                                            <div class="eventPicture" ng-style="'{{event.restaurant.image}}'!='' && {'background-image':'url(../img/{{event.restaurant.image}})'}">
+                                            <div class="eventPicture" ng-style="'{{event.restaurant.image}}'!='' && {'background-image':'url(../img/resto/{{event.restaurant.image}})'}">
                                                 <timer end-time="event.joindeadline" ng-show="isToday(event.joindeadline) && !isPassed(event.joindeadline)" interval="1000">
                                                     {{hhours}}:{{mminutes}}:{{sseconds}}
                                                 </timer>
