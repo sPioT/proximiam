@@ -59,7 +59,10 @@
             <div id="connected" class="action" ng-show="user">
                 {{user.nickname}}
             </div>
-            <div class="avatar" ng-show="user" ng-style="'{{user.image}}'!='' && {'background-image':'url(../img/user/{{user.image}})'}"></div>
+            <div class="avatar" ng-show="user">
+                <img src="../img/user/{{user.image}}" ng-show="user.image">
+                <img src="../img/user/default.png" ng-hide="user.image">
+            </div>
         </header>
         <div ng-controller="eventCtrl" id="content">
             <main ng-show="agenda.length">
