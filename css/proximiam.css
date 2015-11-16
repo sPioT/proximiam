@@ -218,7 +218,7 @@ div.attendees{
     padding-top: 2px;
 }
 
-div.join{
+div.join,div.quit{
     color: #12254b;
     font-size: 14px;
     position: absolute;
@@ -227,6 +227,10 @@ div.join{
     background: url('../img/picto/add.png') no-repeat left;
     padding-left: 18px;
     padding-top: 2px;
+}
+
+div.quit{
+    background: url('../img/picto/remove.png') no-repeat left;
 }
 
 div.joinclosed{

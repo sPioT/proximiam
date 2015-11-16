@@ -91,7 +91,8 @@
                                                 <div class="restaurantName">{{event.restaurant.name}}</div>
                                                 <div class="eventDate">{{event.eventdate | date:'shortTime'}}</div>
                                                 <div class="attendees">{{event.attendee.length}}</div>
-                                                <div class="join" ng-show="!isPassed(event.joindeadline)">J'y vais !</div>
+                                                <div class="join" ng-show="!isPassed(event.joindeadline) && !isIn(user,event.attendee)">J'y vais !</div>
+                                                <div class="quit" ng-show="!isPassed(event.joindeadline) && isIn(user,event.attendee)">Je n'y vais plus !</div>
                                                 <div class="joinclosed" ng-show="isPassed(event.joindeadline)">Inscriptions fermées</div>
                                             </div>
                                         </article>

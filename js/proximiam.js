@@ -21,7 +21,7 @@ var menu = angular.module('menu',[]);
  */
 
 eventList.controller('eventCtrl',
-    function ($scope,$http,$filter) {
+    function ($rootScope,$scope,$http,$filter) {
 
         $scope.isToday = function(dt){
             $scope.NewDt=$filter('date')(dt, 'shortDate');
@@ -38,6 +38,19 @@ eventList.controller('eventCtrl',
             }
         }
 
+        $scope.isIn = function(user,userArray){
+        	if (user == undefined || userArray == undefined || userArray.length==0){
+        		return false;
+        	}
+
+        	for (var i=0 ; userArray.length ; i++){
+        		if (userArray[i].id == user.id) {
+        			return true;
+        		}
+        	}
+        	return false;
+        }
+
         $scope.refresh = function(){
             $http.get('../json/agenda.json?t='+new Date()).success(function(data){
                 $scope.agenda = data;
@@ -52,11 +65,11 @@ eventList.controller('eventCtrl',
 );
 
 menu.controller('menuCtrl',
-    function ($scope,$http,$filter) {
+    function ($rootScope,$scope,$http,$filter) {
 
         $scope.connect = function(){
             $http.get('../json/user.json?t='+new Date()).success(function(user){
-                $scope.user = user;
+                $rootScope.user = user;
             });
         }
     }    
