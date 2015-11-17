@@ -39,12 +39,12 @@ eventList.controller('eventCtrl',
         }
 
         $scope.isIn = function(user,userArray){
-        	if (user == undefined || userArray == undefined || userArray.length==0){
+        	if (user==undefined || userArray==undefined || userArray.length<1){
         		return false;
         	}
 
-        	for (var i=0 ; userArray.length ; i++){
-        		if (userArray[i].id == user.id) {
+        	for (var i=0 ; i < userArray.length ; i++){
+        		if (user.id == userArray[i].id) {
         			return true;
         		}
         	}

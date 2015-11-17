@@ -59,7 +59,7 @@
             <div id="connected" class="action" ng-show="user">
                 {{user.nickname}}
             </div>
-            <div class="avatar" ng-show="user">
+            <div class="avatar" ng-show="user!=undefined">
                 <img src="../img/user/{{user.image}}" ng-show="user.image">
                 <img src="../img/user/default.png" ng-hide="user.image">
             </div>
