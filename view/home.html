@@ -64,46 +64,41 @@
                 <img src="../img/user/default.png" ng-hide="user.image">
             </div>
         </header>
-        <div ng-controller="eventCtrl" id="content">
-            <main ng-show="agenda.length">
-                <ul id="agenda">
-                    <li ng-repeat="day in agenda | orderBy:'date'">
-                        <section class="day">
-                            <div class="eventDay">
-                                <div class="day">
-                                    {{day.date | date:'dd'}}
-                                </div>
-                                <div class="month">
-                                    {{day.date | date:'MMM'}}
-                                </div>
+        <main ng-controller="eventCtrl" id="content">
+            <ul id="agenda" ng-show="agenda.length">
+                <li ng-repeat="day in agenda | orderBy:'date'">
+                    <section class="day">
+                        <div class="eventDay">
+                            <div class="day">
+                                {{day.date | date:'dd'}}
                             </div>
-                            <div class="events">
-                                <ul class="eventList">
-                                    <li ng-repeat="event in day.events">
-                                        <article class="event" ng-style="isPassed('{{event.eventdate}}') && {'opacity':'0.50'}">
-                                            <div class="eventPicture" ng-style="'{{event.restaurant.image}}'!='' && {'background-image':'url(../img/resto/{{event.restaurant.image}})'}">
-                                                <timer end-time="event.joindeadline" ng-show="isToday(event.joindeadline) && !isPassed(event.joindeadline)" interval="1000">
-                                                    {{hhours}}:{{mminutes}}:{{sseconds}}
-                                                </timer>
-                                            </div>
-                                            <div class="eventDetail">
-                                                <div class="eventName">{{event.eventname}}</div>
-                                                <div class="restaurantName">{{event.restaurant.name}}</div>
-                                                <div class="eventDate">{{event.eventdate | date:'shortTime'}}</div>
-                                                <div class="attendees">{{event.attendee.length}}</div>
-                                                <div class="join" ng-show="!isPassed(event.joindeadline) && !isIn(user,event.attendee)">J'y vais !</div>
-                                                <div class="quit" ng-show="!isPassed(event.joindeadline) && isIn(user,event.attendee)">Je n'y vais plus !</div>
-                                                <div class="joinclosed" ng-show="isPassed(event.joindeadline)">Inscriptions fermées</div>
-                                            </div>
-                                        </article>
-                                    </li>
-                                <ul>
+                            <div class="month">
+                                {{day.date | date:'MMM'}}
                             </div>
-                        </section>
-                    </li>
-                <ul>
-                
-            </main>
-        </div>
+                        </div>
+                       <ul class="eventList">
+                            <li ng-repeat="event in day.events">
+                                <article class="event" ng-style="isPassed('{{event.eventdate}}') && {'opacity':'0.50'}">
+                                    <div class="eventPicture" ng-style="'{{event.restaurant.image}}'!='' && {'background-image':'url(../img/resto/{{event.restaurant.image}})'}">
+                                         <timer end-time="event.joindeadline" ng-show="isToday(event.joindeadline) && !isPassed(event.joindeadline)" interval="1000">
+                                            {{hhours}}:{{mminutes}}:{{sseconds}}
+                                        </timer>
+                                    </div>
+                                    <div class="eventDetail">
+                                        <div class="eventName">{{event.eventname}}</div>
+                                        <div class="restaurantName">{{event.restaurant.name}}</div>
+                                        <div class="eventDate">{{event.eventdate | date:'shortTime'}}</div>
+                                        <div class="attendees">{{event.attendee.length}}</div>
+                                        <div class="join" ng-show="!isPassed(event.joindeadline) && !isIn(user,event.attendee)">J'y vais !</div>
+                                        <div class="quit" ng-show="!isPassed(event.joindeadline) && isIn(user,event.attendee)">Je n'y vais plus !</div>
+                                        <div class="joinclosed" ng-show="isPassed(event.joindeadline)">Inscriptions fermées</div>
+                                    </div>
+                                </article>
+                             </li>
+                        <ul>
+                    </section>
+                </li>
+            <ul>        
+        </main>
     </body>
 </html>

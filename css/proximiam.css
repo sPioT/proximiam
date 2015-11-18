@@ -114,7 +114,7 @@ header div.avatar img{
     border-radius: 50%;
 }
 
-div#content{margin-top: 230px}
+main{margin-top: 230px}
 
 section.day{
     background-color: #F5F5F5;
@@ -145,11 +145,11 @@ div.eventDay div.month{
     color: #5baee1;
 }
 
-div.events{
+ul.eventList{
     padding-left: 200px;
 }
 
-div.events article {
+ul.eventList article {
     height: 102px;
     border: 1px solid lightgrey;
     background-color: white;
@@ -247,7 +247,7 @@ div.joinclosed{
 
 @media (max-width:890px){
 
-    div.events article{
+    ul.eventList article{
         width: 220px;
         height: 208px;
     }
