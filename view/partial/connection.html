@@ -1,0 +1,52 @@
+<div class="modal-header"><span ng-hide="newAccount">Connexion</span><span ng-show="newAccount">Création d'un compte</span></div>
+<div class="modal-body">
+	<style>
+		label{width:150px;text-align: right}
+		form.connection{
+			text-align: center;
+		}
+		form div.result{
+			color: red;
+			min-height: 30px;
+		}
+		.modal-header{
+			background-color: #299FE8;
+			color: #FFF;
+			font-size: 24px;
+			border-radius: 5px 5px 0px 0px;
+			text-align: center;
+		}
+
+		div.action{
+			text-align: right;
+		}
+	</style>
+
+	<form ng-submit="connection()" class="connection" ng-hide="newAccount" name="loginForm">
+	    <div><label>Identifiant :</label> <input ng-model="identifiants.login" required/></div>
+		<div><label>Mot de passe :</label> <input type="password" ng-model="identifiants.password" required/></div>
+		
+		<div class="result">{{resultat}}</div>
+
+		<div class="action">
+
+			<button class="btn" ng-click="switchAccountForm()">Je n'ai pas de compte</button>
+			<button type="submit" class="btn btn-primary">Connexion</button>
+		</div>
+	</form>
+
+	<form ng-submit="createAccount()" class="connection" ng-show="newAccount" name="createAccountForm">
+	    <div><label>Identifiant :</label> <input ng-model="identifiants.login" required/></div>
+		<div><label>Mot de passe :</label> <input type="password" ng-model="identifiants.password" required/></div>
+		<div><label>Validation du mot de passe :</label> <input type="password" ng-model="identifiants.password2" required/></div>
+		
+		<div class="result">{{resultat}}</div>
+
+		<div class="action">
+			<button type="submit" class="btn btn-primary">Créer le compte</button>
+		</div>
+	</form>
+
+	
+
+</div>

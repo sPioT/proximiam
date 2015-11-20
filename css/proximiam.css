@@ -97,20 +97,13 @@ header #connect{
 }
 
 header #connected{
-   right: 32px;
-   padding-right: 5px; 
+    padding-right: 5px;
+    margin: 4px 10px;
 }
 
-header div.avatar{
+header img.avatar{
     height: 32px;
     width: 32px;
-    position: absolute;
-    right: 10px;
-    top: 4px;
-}
-
-header div.avatar img{
-    width:100%;
     border-radius: 50%;
 }
 
@@ -137,10 +130,10 @@ div.eventDay div.month{
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
     writing-mode: lr-tb;
-    font-size: 56px;
+    font-size: 42px;
     width: 96px;
     float: left;
-    line-height: 48px;
+    line-height: 42px;
     margin: 21px -32px 0px;
     color: #5baee1;
 }

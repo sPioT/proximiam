@@ -6,9 +6,12 @@
         <title>ProxiMiam</title>        
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/proximiam.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="../js/vendor/angular.js"></script>
         <script src="../js/vendor/angular-locale_fr.js"></script>
         <script src="../js/vendor/angular-timer.js"></script>
+        <script src="../js/vendor/ui-bootstrap-0.14.3.min.js"></script>
+        <script src="../js/vendor/popover-toggle.js"></script>
         <script src="../js/vendor/jquery-2.1.4.min.js"></script>
         <script src="../js/proximiam.js"></script>
         <script>
@@ -45,7 +48,7 @@
         </script>
     </head>
     <body>
-        <header ng-controller="menuCtrl">
+        <header ng-controller="MenuController">
             <div id="title"></div>
             <div id="minimenu" ng-show="user">
                 menu
@@ -56,15 +59,16 @@
                 <span id="evenements" class="action">Évènements</span>
             </nav>
             <div id="connect" class="action" ng-hide="user" ng-click="connect()">Je me connecte</div>
-            <div id="connected" class="action" ng-show="user">
+
+            <div id="connected" class="action" ng-show="user" popover-placement="bottom" uib-popover="usermenu.html" popover-trigger="click">
                 {{user.nickname}}
-            </div>
-            <div class="avatar" ng-show="user!=undefined">
-                <img src="../img/user/{{user.image}}" ng-show="user.image">
-                <img src="../img/user/default.png" ng-hide="user.image">
+                
+                <img src="../img/user/{{user.image}}" ng-show="user.image" class="avatar">
+                <img src="../img/user/default.png" ng-hide="user.image" class="avatar">
+                
             </div>
         </header>
-        <main ng-controller="eventCtrl" id="content">
+        <main ng-controller="EventController" id="content">
             <ul id="agenda" ng-show="agenda.length">
                 <li ng-repeat="day in agenda | orderBy:'date'">
                     <section class="day">

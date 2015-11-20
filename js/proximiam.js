@@ -7,20 +7,20 @@
  */
 var proxiMiamApp = angular.module('proxiMiamApp', [
     // Dépendances du "module"
-    'eventList','timer','menu'
+    'eventList','timer','ui.bootstrap','connection'
 ]);
 
 /**
  * Déclaration du module eventList
  */
 var eventList = angular.module('eventList',[]);
-var menu = angular.module('menu',[]);
+var connection = angular.module('connection',[]);
 
 /**
  * Contrôleur de l'application "ProxiaMiam"
  */
 
-eventList.controller('eventCtrl',
+eventList.controller('EventController',
     function ($rootScope,$scope,$http,$filter) {
 
         $scope.isToday = function(dt){
@@ -64,14 +64,52 @@ eventList.controller('eventCtrl',
 
 );
 
-menu.controller('menuCtrl',
-    function ($rootScope,$scope,$http,$filter) {
+connection.controller('MenuController',
+    function ($rootScope,$scope,$uibModal) {
 
         $scope.connect = function(){
-            $http.get('../json/user.json?t='+new Date()).success(function(user){
-                $rootScope.user = user;
-            });
+
+		 	//Ouverture de la fenêtre
+		 	var dialogOpts = {
+		 		templateUrl : 'partial/connection.html',
+		 		controller : 'ModalConnectionController'
+		 	};
+			
+			var modalInstance = $uibModal.open(dialogOpts);
+
+			modalInstance.result.then(function (user){
+				$rootScope.user = user;
+			});
         }
     }    
 
+);
+
+connection.controller('ModalConnectionController',
+	function ($scope, $uibModalInstance,$http) {
+		$scope.connection = function(){
+			$scope.resultat = '';
+			$http.get('../json/user.json?t='+new Date()).success(
+				function(user){
+					if (user.id !=""){
+                		$uibModalInstance.close(user);
+                	} else{
+                		$scope.resultat="Hum... Il doit y avoir une erreur de frappe.";
+                	}
+            });
+		}
+
+		$scope.switchAccountForm = function(){
+			$scope.resultat = '';
+			$scope.newAccount=true;
+		}
+
+		$scope.createAccount = function(){
+			$scope.resultat = '';
+			if ($scope.identifiants.password != $scope.identifiants.password2){
+				$scope.resultat="Les deux mots de passe ne correspondent pas";
+			}
+
+		}
+	}
 );
