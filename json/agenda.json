@@ -407,7 +407,7 @@
     ]
   },
   {
-    "date": "2015-01-23",
+    "date": "2016-01-23",
     "events": [
       {
         "eventname": "Je me taille au Thaï",
@@ -504,12 +504,12 @@
     ]
   },
   {
-    "date": "2015-11-12",
+    "date": "2015-11-22",
     "events": [
       {
         "eventname": "La pizza du mercredi",
-        "eventdate": "2015-11-12T12:00:00",
-        "joindeadline": "2015-12-11T11:45:00",
+        "eventdate": "2015-11-22T13:19:00",
+        "joindeadline": "2015-11-22T13:09:00",
         "restaurant": {
           "name": "Geekfarm",
           "image": "pizza.jpg"
@@ -531,8 +531,8 @@
       },
       {
         "eventname": "On se fait un kebab ?",
-        "eventdate": "2015-11-12T20:30:00",
-        "joindeadline": "2015-11-12T20:10:00",
+        "eventdate": "2015-11-22T13:19:00",
+        "joindeadline": "2015-11-22T13:19:00",
         "restaurant": {
           "name": "Yakamoz",
           "image": "kebab.jpg"

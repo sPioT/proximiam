@@ -84,7 +84,7 @@
                             <li ng-repeat="event in day.events">
                                 <article class="event" ng-style="isPassed('{{event.eventdate}}') && {'opacity':'0.50'}">
                                     <div class="eventPicture" ng-style="'{{event.restaurant.image}}'!='' && {'background-image':'url(../img/resto/{{event.restaurant.image}})'}">
-                                         <timer end-time="event.joindeadline" ng-show="isToday(event.joindeadline) && !isPassed(event.joindeadline)" interval="1000">
+                                         <timer end-time="event.joindeadline" ng-show="isToday(event.joindeadline) && !isPassed(event.joindeadline)" interval="1000" finish-callback="callbackTimer(event)">
                                             {{hhours}}:{{mminutes}}:{{sseconds}}
                                         </timer>
                                     </div>
@@ -92,10 +92,11 @@
                                         <div class="eventName">{{event.eventname}}</div>
                                         <div class="restaurantName">{{event.restaurant.name}}</div>
                                         <div class="eventDate">{{event.eventdate | date:'shortTime'}}</div>
+                                        <timer end-time="event.eventdate" ng-show="false" interval="1000" finish-callback="callbackTimer(event)">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
                                         <div class="attendees">{{event.attendee.length}}</div>
-                                        <div class="join" ng-show="!isPassed(event.joindeadline) && !isIn(user,event.attendee)">J'y vais !</div>
-                                        <div class="quit" ng-show="!isPassed(event.joindeadline) && isIn(user,event.attendee)">Je n'y vais plus !</div>
-                                        <div class="joinclosed" ng-show="isPassed(event.joindeadline)">Inscriptions fermées</div>
+                                        <div class="join" ng-show="!isPassed(event.joindeadline) && !isIn(user,event.attendee)">Je m'inscris !</div>
+                                        <div class="quit" ng-show="!isPassed(event.joindeadline) && isIn(user,event.attendee)">J'y renonce !</div>
+                                        <div class="joinclosed" ng-show="isPassed(event.joindeadline)"><span ng-show="!isIn(user,event.attendee)">Trop tard</span><span ng-show="isIn(user,event.attendee)">Je suis inscrit(e)</span></div>
                                     </div>
                                 </article>
                              </li>

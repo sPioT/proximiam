@@ -51,13 +51,30 @@ eventList.controller('EventController',
         	return false;
         }
 
+        var refreshOn = false;
+
         $scope.refresh = function(){
-            $http.get('../json/agenda.json?t='+new Date()).success(function(data){
-                $scope.agenda = data;
-            });
+            if (!refreshOn){
+                refreshOn = true;
+                $http.get('../json/agenda.json?t='+new Date()).success(function(data){
+                    $scope.agenda = data;
+                });
+                refreshOn = false;
+            }
         }
 
         $scope.refresh();
+
+
+        $scope.callbackTimer = function(event){
+            if (!refreshOn){
+                setTimeout( function()
+                {
+                    $scope.$apply();
+                }, 1000 );
+            }
+        }
+
     }
 
     
