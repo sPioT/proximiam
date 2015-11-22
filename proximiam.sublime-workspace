@@ -4,15 +4,63 @@
 		"selected_items":
 		[
 			[
-				"NG-S",
-				"ng-style	AngularJS"
+				"ng-s",
+				"ng-show	AngularJS"
 			],
 			[
-				"ba",
-				"background-color"
+				"refre",
+				"refreshOn"
+			],
+			[
+				"re",
+				"refreshOn"
+			],
+			[
+				"$in",
+				"$interval	AngularJS"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"ng",
+				"ng-click	AngularJS"
+			],
+			[
+				"s",
+				"ng-show	AngularJS"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"mini",
+				"minimenu"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"min",
+				"min-width"
 			],
 			[
 				"back",
+				"background-size"
+			],
+			[
+				"ba",
 				"background-color"
 			],
 			[
@@ -44,28 +92,19 @@
 	"buffers":
 	[
 		{
-			"file": "js/proximiam.js",
+			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 1846,
-				"line_ending": "Windows",
-				"name": "// js/ProxiMiamApp.js"
+				"buffer_size": 24203,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "view/home.html",
 			"settings":
 			{
-				"buffer_size": 5539,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/proximiam.css",
-			"settings":
-			{
-				"buffer_size": 4766,
-				"line_ending": "Windows"
+				"buffer_size": 5805,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -73,7 +112,7 @@
 			"settings":
 			{
 				"buffer_size": 12654,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -81,7 +120,25 @@
 			"settings":
 			{
 				"buffer_size": 85,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/proximiam.js",
+			"settings":
+			{
+				"buffer_size": 3195,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "[SideBarGit@SublimeText] \nwarning: push.default n'est pas défini ; sa valeur implicite a changé dans Git 2.0\nde 'matching' vers 'simple'. Pour supprimer ce message et maintenir\nle comportement actuel après la modification de la valeur de défaut, utilisez :\n\n  git config --global push.default matching\n\nPour supprimer ce message et adopter le nouveau comportement maintenant, utilisez :\n\n  git config --global push.default simple\n\nQuand push.default vaudra 'matching', git poussera les branches locales\nsur les branches distantes qui existent déjà avec le même nom.\n\nDepuis Git 2.0, Git utilise par défaut le comportement plus conservatif 'simple'\nqui ne pousse la branche courante que vers la branche distante correspondante\nque 'git pull' utilise pour mettre à jour la branche courante.\n \nVoir 'git help config' et chercher 'push.default' pour plus d'information.\n(le mode 'simple' a été introduit dans Git 1.7.11. Utilisez le mode similaire\n'current' au lieu de 'simple' si vous utilisez de temps en temps d'anciennes versions de Git)\n\nTo git@github.com:sPioT/proximiam.git\n   ec855cc..5a868a1  master -> master",
+			"settings":
+			{
+				"buffer_size": 1114,
+				"line_ending": "Unix",
+				"name": "[SideBarGit@SublimeText]",
+				"scratch": true
 			}
 		}
 	],
@@ -122,39 +179,37 @@
 	},
 	"expanded_folders":
 	[
-		"/D/wamp/www/proximiam",
-		"/D/wamp/www/proximiam/css",
-		"/D/wamp/www/proximiam/js",
-		"/D/wamp/www/proximiam/json",
-		"/D/wamp/www/proximiam/view"
+		"/home/piot/Documents/dev/proximiam",
+		"/home/piot/Documents/dev/proximiam/css",
+		"/home/piot/Documents/dev/proximiam/img",
+		"/home/piot/Documents/dev/proximiam/img/picto",
+		"/home/piot/Documents/dev/proximiam/js",
+		"/home/piot/Documents/dev/proximiam/js/vendor",
+		"/home/piot/Documents/dev/proximiam/json",
+		"/home/piot/Documents/dev/proximiam/view"
 	],
 	"file_history":
 	[
-		"/D/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
-		"/D/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
-		"/D/wamp/bin/apache/apache2.4.9/conf/wampserver.conf",
-		"/D/wamp/www/proximiam/json/agenda_generator",
-		"/D/wamp/www/proximiam/json/agenda.json",
-		"/D/wamp/www/proximiam/js/vendor/angular-locale_fr.js",
-		"/D/wamp/www/proximiam/css/proximiam.css",
-		"/D/wamp/www/proximiam/css/style.css",
-		"/D/wamp/www/proximiam/js/vendor/angular-timer.js",
-		"/D/wamp/www/proximiam/json/user.json",
+		"/home/piot/Documents/dev/proximiam/css/proximiam.css",
+		"/home/piot/Documents/dev/proximiam/json/agenda.json",
+		"/home/piot/Documents/dev/proximiam/js/proximiam.js",
+		"/home/piot/Documents/dev/proximiam/json/agenda_generator",
+		"/home/piot/Documents/dev/proximiam/view/home.html",
+		"/home/piot/Documents/dev/proximiam/js/vendor/angular-locale_fr.js",
+		"/home/piot/Documents/dev/proximiam/js/vendor/angular-timer.js",
+		"/home/piot/Documents/dev/proximiam/css/style.css",
 		"/home/piot/.config/sublime-text-3/Packages/User/SideBarGit.sublime-settings",
 		"/home/piot/Documents/dev/proximiam/proximiam.sublime-project",
 		"/home/piot/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
 		"/home/piot/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
-		"/home/piot/Documents/dev/proximiam/js/vendor/angular-timer.js",
 		"/home/piot/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/piot/Documents/dev/proximiam/json/agenda_generator",
-		"/home/piot/Documents/dev/proximiam/json/agenda.json",
 		"/home/piot/.profile",
 		"/home/piot/.local/share/applications/mimeapps.list",
 		"/home/piot/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -168,8 +223,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"taï",
-			"gee",
+			"div",
 			"finishCallback",
 			"\"date\": \"2015-11-23\",",
 			"\"date\": \"2015-11-23\n\",",
@@ -196,36 +250,35 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "js/proximiam.js",
+					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1846,
+						"buffer_size": 24203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								699,
-								699
+								24131,
+								24131
 							]
 						],
 						"settings":
 						{
-							"auto_name": "// js/ProxiMiamApp.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -234,15 +287,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5539,
+						"buffer_size": 5805,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1099,
-								1099
+								5297,
+								5297
 							]
 						],
 						"settings":
@@ -252,44 +305,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/proximiam.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4282,
-								4282
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3105.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "json/agenda.json",
 					"semi_transient": false,
 					"settings":
@@ -301,8 +324,8 @@
 						"selection":
 						[
 							[
-								9439,
-								9439
+								12360,
+								12360
 							]
 						],
 						"settings":
@@ -312,14 +335,20 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5728.0,
+						"translation.y": 7521.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"file": "img/picto/menu48.png",
+					"semi_transient": true,
+					"stack_index": 0,
+					"type": "image"
+				},
+				{
+					"buffer": 3,
 					"file": "json/user.json",
 					"semi_transient": false,
 					"settings":
@@ -331,19 +360,80 @@
 						"selection":
 						[
 							[
-								0,
-								85
+								47,
+								47
 							]
 						],
 						"settings":
 						{
+							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/proximiam.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1844,
+								1844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[SideBarGit@SublimeText]",
+							"default_dir": "/home/piot/Documents/dev/proximiam",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -351,7 +441,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -388,7 +478,7 @@
 	"project": "proximiam.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
